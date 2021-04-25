@@ -3,6 +3,7 @@ call plug#begin("~/.config/nvim/plugged")
 	Plug 'tpope/vim-rails'
 	Plug 'tpope/vim-fugitive'
 	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-dispatch'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'morhetz/gruvbox'
