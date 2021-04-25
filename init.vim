@@ -28,6 +28,23 @@ nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR> 
 
+" PLUGIN: VIM-FUGITIVE
+nnoremap <Leader>ga :Git add %:p<CR><CR>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gc :Gcommit -v -q<CR>
+nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>ge :Gedit<CR>
+nnoremap <Leader>gr :Gread<CR>
+nnoremap <Leader>gw :Gwrite<CR><CR>
+nnoremap <Leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <Leader>gp :Ggrep<Space>
+nnoremap <Leader>gm :Gmove<Space>
+nnoremap <Leader>gb :Git branch<Space>
+nnoremap <Leader>go :Git checkout<Space>
+nnoremap <Leader>gps :Dispatch! git push<CR>
+nnoremap <Leader>gpl :Dispatch! git pull<CR>
+
 " BUFFERS
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
@@ -47,6 +64,19 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" Add coc-extensions
+let g:coc_global_extensions = [
+			\ 'coc-json',
+        		\ 'coc-tsserver',
+        		\ 'coc-html',
+        		\ 'coc-css',
+			\ 'coc-clangd',
+			\ 'coc-flutter',
+			\ 'coc-python',
+			\ 'coc-solargraph',
+			\ 'coc-vetur' 
+			\ ]
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -78,3 +108,5 @@ set hidden			" Allow to open new buffers if not saved current
 set clipboard+=unnamedplus	" Allow to copy to system's clipboard
 
 autocmd vimenter * ++nested colorscheme gruvbox
+
+let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
