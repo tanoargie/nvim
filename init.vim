@@ -20,6 +20,7 @@ let g:airline#extensions#tabline#enabled = 1
 " PLUGIN: FZF
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>p :Files<CR>
+nnoremap <silent> <Leader>o :GFiles<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>' :Marks<CR>
@@ -111,3 +112,4 @@ set clipboard+=unnamedplus	" Allow to copy to system's clipboard
 autocmd vimenter * ++nested colorscheme gruvbox
 
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
