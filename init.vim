@@ -77,7 +77,8 @@ let g:coc_global_extensions = [
 			\ 'coc-flutter',
 			\ 'coc-python',
 			\ 'coc-solargraph',
-			\ 'coc-vetur' 
+			\ 'coc-vetur',
+			\ 'coc-eslint'
 			\ ]
 
 " Use `[g` and `]g` to navigate diagnostics
@@ -94,6 +95,9 @@ nmap <silent> gr <Plug>(coc-references)
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -108,8 +112,11 @@ set number			" Show current line number
 set relativenumber		" Show relative line numbers
 set hidden			" Allow to open new buffers if not saved current
 set clipboard+=unnamedplus	" Allow to copy to system's clipboard
+set autoindent 			" Keep indentation from previous line
+set noswapfile 			" Disable swap files
 
 autocmd vimenter * ++nested colorscheme gruvbox
 
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+let delimitMate_expand_cr=1
