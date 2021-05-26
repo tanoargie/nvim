@@ -79,7 +79,8 @@ let g:coc_global_extensions = [
 			\ 'coc-solargraph',
 			\ 'coc-vetur',
 			\ 'coc-eslint',
-			\ 'coc-prettier'
+			\ 'coc-prettier',
+			\ 'coc-tailwindcss'
 			\ ]
 
 " Use `[g` and `]g` to navigate diagnostics
