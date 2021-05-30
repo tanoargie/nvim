@@ -12,11 +12,20 @@ call plug#begin("~/.config/nvim/plugged")
 	Plug 'vim-scripts/BufOnly.vim'
 	Plug 'vim-ruby/vim-ruby'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
 call plug#end()
 
 let mapleader = "\<Space>"
 
 let g:airline#extensions#tabline#enabled = 1
+
+" PLUGIN: UltiSnips
+
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " PLUGIN: FZF
 nnoremap <silent> <Leader>b :Buffers<CR>
