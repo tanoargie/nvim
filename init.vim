@@ -10,6 +10,7 @@ call plug#begin("~/.config/nvim/plugged")
 	Plug 'vim-airline/vim-airline'
 	Plug 'Raimondi/delimitMate'
 	Plug 'vim-scripts/BufOnly.vim'
+	Plug 'vim-ruby/vim-ruby'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
