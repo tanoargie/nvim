@@ -125,6 +125,10 @@ set relativenumber		" Show relative line numbers
 set hidden			" Allow to open new buffers if not saved current
 set clipboard+=unnamedplus	" Allow to copy to system's clipboard
 set autoindent 			" Keep indentation from previous line
+set smartindent 		" Automatically inserts indentation
+set expandtab
+set tabstop=4
+set shiftwidth=4
 set noswapfile 			" Disable swap files
 
 autocmd vimenter * ++nested colorscheme gruvbox
