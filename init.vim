@@ -45,7 +45,7 @@ nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Git<CR>
 nnoremap <Leader>gc :Git commit -v -q<CR>
 nnoremap <Leader>gt :Git commit -v -q %:p<CR>
-nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gdf :Gvdiff<CR>
 nnoremap <Leader>ge :Gedit<CR>
 nnoremap <Leader>gr :Gread<CR>
 nnoremap <Leader>gw :Gwrite<CR><CR>
