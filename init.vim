@@ -15,6 +15,7 @@ call plug#begin("~/.config/nvim/plugged")
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 let mapleader = "\<Space>"
