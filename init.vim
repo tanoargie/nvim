@@ -12,7 +12,6 @@ call plug#begin("~/.config/nvim/plugged")
 	Plug 'vim-scripts/BufOnly.vim'
 	Plug 'vim-ruby/vim-ruby'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'maxmellon/vim-jsx-pretty'
@@ -117,13 +116,6 @@ let g:mkdp_page_title = '?${name}?'
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
 
-" PLUGIN: UltiSnips
-
-let g:UltiSnipsExpandTrigger="<c-s>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " PLUGIN: FZF
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>p :Files<CR>
@@ -188,7 +180,8 @@ let g:coc_global_extensions = [
 			\ 'coc-vetur',
 			\ 'coc-eslint',
 			\ 'coc-prettier',
-			\ 'coc-tailwindcss'
+			\ 'coc-tailwindcss',
+            \ 'coc-snippets'
 			\ ]
 
 " Use `[g` and `]g` to navigate diagnostics
