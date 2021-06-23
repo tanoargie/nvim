@@ -182,7 +182,8 @@ let g:coc_global_extensions = [
 			\ 'coc-eslint',
 			\ 'coc-prettier',
 			\ 'coc-tailwindcss',
-            \ 'coc-snippets'
+            \ 'coc-snippets',
+            \ 'coc-angular',
 			\ ]
 
 " Use `[g` and `]g` to navigate diagnostics
