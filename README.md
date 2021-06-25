@@ -1,5 +1,7 @@
 # My Neovim configuration
 
+This is my neovim configuration file. It uses COC for completion and has plugins for most of the languages and frameworks these days like React, Typescript, Vue, Angular, Nginx, NodeJS, HTML, CSS, Python, Ruby, Rails, Django, C++, Flutter and even CSS frameworks like TailwindCSS!
+
 ### Prerequisites
 
 - Nvim >= 4.4
