@@ -12,19 +12,19 @@
 
 1. Make `.config` directory if not already made and access it.
 
-```console
+```
 mkdir ~/.config && cd ~/.config
 ```
 
 2. Clone this repository as `nvim` folder
 
-```console
+```
 git clone git@github.com:francoserio/neovim-config.git nvim
 ```
 
 3. Enter newly created folder and open it.
 
-```console
+```
 cd nvim && nvim .
 ```
 
