@@ -18,10 +18,10 @@ This is my neovim configuration file. It uses COC for completion and has plugins
 mkdir ~/.config && cd ~/.config
 ```
 
-2. Clone this repository as `nvim` folder
+2. Clone this repository
 
 ```
-git clone git@github.com:francoserio/neovim-config.git nvim
+git clone git@github.com:francoserio/nvim.git
 ```
 
 3. Enter newly created folder and open it.
