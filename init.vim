@@ -117,6 +117,9 @@ let g:mkdp_page_title = '?${name}?'
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
 
+" PLUGIN: BufOnly
+nnoremap <silent> <Leader>bo :BufOnly<CR>
+
 " PLUGIN: MARKDOWN-PREVIEW
 nnoremap <silent> <Leader>m :MarkdownPreview<CR>
 nnoremap <silent> <Leader>ms :MarkdownPreviewStop<CR>
