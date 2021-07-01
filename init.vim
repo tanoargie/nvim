@@ -154,6 +154,7 @@ nnoremap <Leader>gm :Gmove<Space>
 nnoremap <Leader>gb :Git branch<Space>
 nnoremap <Leader>go :Git checkout<Space>
 nnoremap <Leader>gps :Dispatch! git push<CR>
+nnoremap <Leader>gpf :Dispatch! git push -f<CR>
 nnoremap <Leader>gpl :Dispatch! git pull<CR>
 
 " BUFFERS
