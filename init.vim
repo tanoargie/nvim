@@ -140,6 +140,7 @@ nnoremap <silent> <Leader>h/ :History/<CR>
 
 " PLUGIN: VIM-FUGITIVE
 nnoremap <Leader>ga :Git add %:p<CR><CR>
+nnoremap <Leader>gal :Git add .<CR><CR>
 nnoremap <Leader>gs :Git<CR>
 nnoremap <Leader>gc :Git commit -v -q<CR>
 nnoremap <Leader>gt :Git commit -v -q %:p<CR>
