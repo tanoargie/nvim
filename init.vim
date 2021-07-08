@@ -17,6 +17,7 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'tpope/vim-endwise'
+    Plug 'vim-test/vim-test'
 call plug#end()
 
 let mapleader = "\<Space>"
@@ -117,6 +118,13 @@ let g:mkdp_page_title = '?${name}?'
 " recognized filetypes
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
+
+" PLUGIN: VIM-TEST
+nnoremap <silent> <Leader>tn :TestNearest<CR>
+nnoremap <silent> <Leader>tf :TestFile<CR>
+nnoremap <silent> <Leader>ts :TestSuite<CR>
+nnoremap <silent> <Leader>tl :TestLast<CR>
+nnoremap <silent> <Leader>tv :TestVisit<CR>
 
 " PLUGIN: BufOnly
 nnoremap <silent> <Leader>bo :BufOnly<CR>
