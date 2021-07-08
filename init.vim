@@ -120,6 +120,10 @@ let g:mkdp_page_title = '?${name}?'
 let g:mkdp_filetypes = ['markdown']
 
 " PLUGIN: VIM-TEST
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+endif
+
 nnoremap <silent> <Leader>tn :TestNearest<CR>
 nnoremap <silent> <Leader>tf :TestFile<CR>
 nnoremap <silent> <Leader>ts :TestSuite<CR>
