@@ -1,0 +1,6 @@
+{
+  "eslint.autoFixOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true
+}
