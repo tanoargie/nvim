@@ -125,6 +125,7 @@ if has('nvim')
 endif
 
 let g:test#ruby#rspec#executable = 'docker-compose run app bundle exec rspec'
+let g:test#strategy = 'neovim'
 
 nnoremap <silent> <Leader>tn :TestNearest<CR>
 nnoremap <silent> <Leader>tf :TestFile<CR>
