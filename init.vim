@@ -119,6 +119,9 @@ let g:mkdp_page_title = '?${name}?'
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
 
+" Mapping for explorer
+nnoremap <silent> <Leader>e :Exp<CR>
+
 " PLUGIN: VIM-TEST
 if has('nvim')
   tmap <C-o> <C-\><C-n>
