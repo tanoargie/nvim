@@ -10,6 +10,7 @@ This is my neovim configuration file. It uses COC for completion and has plugins
 - Python 3 (**OPTIONAL**: for healthproviders)
 - Ruby >= 3.0.0 (**OPTIONAL**: for healthproviders)
 - Solargraph (**OPTIONAL**: to work with coc-solargraph. You should be able to install it with the following command: `gem install solargraph`)
+- Clangd (**OPTIONAL**: to work with coc-clangd. You should be able to install it with the following commands: `sudo apt-get install clangd-9` (ubuntu) or `brew install llvm` (mac). Remember to add clangd to your path)./opt/llvm/bin
 
 ### Installation
 
