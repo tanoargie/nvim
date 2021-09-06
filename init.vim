@@ -18,6 +18,7 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'tpope/vim-endwise'
     Plug 'vim-test/vim-test'
+    Plug 'segeljakt/vim-silicon'
 call plug#end()
 
 let mapleader = "\<Space>"
@@ -129,6 +130,9 @@ endif
 
 let g:test#ruby#rspec#executable = 'docker-compose run app bundle exec rspec'
 let g:test#strategy = 'neovim'
+
+let g:silicon = {}
+let g:silicon['output'] = '~/images/silicon-{time:%Y-%m-%d-%H%M%S}.png'
 
 nnoremap <silent> <Leader>tn :TestNearest<CR>
 nnoremap <silent> <Leader>tf :TestFile<CR>
