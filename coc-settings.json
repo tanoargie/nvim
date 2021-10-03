@@ -2,5 +2,6 @@
   "eslint.autoFixOnSave": true,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "solargraph.autoformat": true,
-  "solargraph.formatting": true
+  "solargraph.formatting": true,
+  "vetur.format.enable": false
 }
