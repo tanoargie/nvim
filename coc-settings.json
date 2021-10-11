@@ -3,5 +3,6 @@
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "solargraph.autoformat": true,
   "solargraph.formatting": true,
+  "vetur.trace.server": "verbose",
   "vetur.format.enable": false
 }
