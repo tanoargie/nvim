@@ -1,7 +1,6 @@
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/variables.vim
 source ~/.config/nvim/mappings.vim
-source ~/.config/nvim/functions.vim
 
 set number			" Show current line number
 set relativenumber		" Show relative line numbers
