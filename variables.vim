@@ -110,7 +110,7 @@ let g:coc_global_extensions = [
         	\ 'coc-css',
 			\ 'coc-clangd',
 			\ 'coc-flutter',
-			\ 'coc-python',
+			\ 'coc-pyright',
 			\ 'coc-solargraph',
 			\ 'coc-vetur',
 			\ 'coc-eslint',
