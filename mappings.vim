@@ -52,6 +52,7 @@ nnoremap <Leader>go :Git checkout<Space>
 nnoremap <Leader>gps :Dispatch! git push<CR>
 nnoremap <Leader>gpf :Dispatch! git push -f<CR>
 nnoremap <Leader>gpl :Dispatch! git pull<CR>
+nnoremap <Leader>gpd :Git -c push.default=current push<CR>
 
 " BUFFERS
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
