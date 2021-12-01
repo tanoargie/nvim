@@ -20,4 +20,5 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'tpope/vim-endwise'
     Plug 'vim-test/vim-test'
     Plug 'segeljakt/vim-silicon'
+    Plug 'jparise/vim-graphql'
 call plug#end()
