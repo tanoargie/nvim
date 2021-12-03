@@ -118,6 +118,7 @@ let g:coc_global_extensions = [
 			\ 'coc-tailwindcss',
             \ 'coc-snippets',
             \ 'coc-angular',
+            \ 'coc-rls',
 			\ ]
 
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
