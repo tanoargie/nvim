@@ -22,4 +22,5 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'segeljakt/vim-silicon'
     Plug 'jparise/vim-graphql'
     Plug 'rust-lang/rust.vim'
+    Plug 'digitaltoad/vim-pug'
 call plug#end()
