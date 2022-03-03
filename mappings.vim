@@ -52,6 +52,7 @@ nnoremap <Leader>go :Git checkout<Space>
 nnoremap <Leader>gps :Dispatch! git push<CR>
 nnoremap <Leader>gpf :Dispatch! git push -f<CR>
 nnoremap <Leader>gpl :Dispatch! git pull<CR>
+nnoremap <Leader>gpu :Dispatch! git push -u<CR>
 nnoremap <Leader>gpd :Git -c push.default=current push<CR>
 
 " BUFFERS
