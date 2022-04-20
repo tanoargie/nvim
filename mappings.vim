@@ -1,6 +1,14 @@
 " Mapping for explorer
 nnoremap <silent> <Leader>e :Exp<CR>
 
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
+
 " PLUGIN: VIM-TEST
 if has('nvim')
   tmap <C-o> <C-\><C-n>
