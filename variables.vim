@@ -122,5 +122,5 @@ let g:coc_global_extensions = [
 			\ ]
 
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 let delimitMate_expand_cr=1
+
