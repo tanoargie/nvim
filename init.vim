@@ -13,4 +13,9 @@ set tabstop=4
 set shiftwidth=4
 set noswapfile 			" Disable swap files
 
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --hidden --column -g "!.git" --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
 autocmd vimenter * ++nested colorscheme gruvbox
