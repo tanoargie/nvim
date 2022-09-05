@@ -14,6 +14,7 @@ if has('nvim')
   tmap <C-o> <C-\><C-n>
 endif
 
+" Delete buffer without losing split window
 nnoremap <silent> <Leader>cs :bn\|bd #<CR>
 
 nnoremap <silent> <Leader>tn :TestNearest<CR>
