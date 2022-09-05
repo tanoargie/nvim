@@ -5,7 +5,7 @@ This is my neovim configuration file. It uses COC for completion and has plugins
 ### Prerequisites
 
 - Nvim >= 4.4
-- NodeJS >= 12
+- NodeJS >= 16
 - Ripgrep
 - Python 3 (**OPTIONAL**: for healthproviders)
 - Ruby >= 3.0.0 (**OPTIONAL**: for healthproviders)
