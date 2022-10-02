@@ -14,6 +14,9 @@ if has('nvim')
   tmap <C-o> <C-\><C-n>
 endif
 
+" Delete all buffers except current one
+nnoremap <silent> <Leader>ca :%bd\|e#\|bd#<CR>
+
 " Delete buffer without losing split window
 nnoremap <silent> <Leader>cs :bn\|bd #<CR>
 
@@ -22,9 +25,6 @@ nnoremap <silent> <Leader>tf :TestFile<CR>
 nnoremap <silent> <Leader>ts :TestSuite<CR>
 nnoremap <silent> <Leader>tl :TestLast<CR>
 nnoremap <silent> <Leader>tv :TestVisit<CR>
-
-" PLUGIN: BufOnly
-nnoremap <silent> <Leader>bo :BufOnly<CR>
 
 " PLUGIN: MARKDOWN-PREVIEW
 nnoremap <silent> <Leader>m :MarkdownPreview<CR>
