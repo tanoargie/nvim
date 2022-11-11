@@ -103,24 +103,6 @@ let g:test#strategy = 'neovim'
 let g:silicon = {}
 let g:silicon['output'] = '~/images/silicon-{time:%Y-%m-%d-%H%M%S}.png'
 
-let g:coc_global_extensions = [
-			\ 'coc-json',
-        	\ 'coc-tsserver',
-        	\ 'coc-html',
-        	\ 'coc-css',
-			\ 'coc-clangd',
-			\ 'coc-flutter',
-			\ 'coc-pyright',
-			\ 'coc-solargraph',
-			\ 'coc-vetur',
-			\ 'coc-eslint',
-			\ 'coc-prettier',
-			\ 'coc-tailwindcss',
-            \ 'coc-snippets',
-            \ 'coc-angular',
-            \ 'coc-rls',
-			\ ]
-
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 let delimitMate_expand_cr=1
 

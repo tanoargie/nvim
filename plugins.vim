@@ -12,7 +12,6 @@ call plug#begin("~/.config/nvim/plugged")
 	Plug 'Raimondi/delimitMate'
     Plug 'chr4/nginx.vim'
 	Plug 'vim-ruby/vim-ruby'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'honza/vim-snippets'
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'maxmellon/vim-jsx-pretty'

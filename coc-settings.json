@@ -1,9 +1,0 @@
-{
-  "eslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "solargraph.autoformat": true,
-  "solargraph.formatting": true,
-  "vetur.trace.server": "verbose",
-  "diagnostic.virtualText": true,
-  "diagnostic.virtualTextCurrentLineOnly": false
-}
