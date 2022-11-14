@@ -1,16 +1,15 @@
 # My Neovim configuration
 
-This is my neovim configuration file. It uses COC for completion and has plugins for most of the languages and frameworks these days like React, Typescript, Vue, Angular, Nginx, NodeJS, HTML, CSS, Python, Ruby, Rails, Django, C++, Flutter and even CSS frameworks like TailwindCSS!
+This is my neovim configuration file in Lua. It has code completion and has plugins for Javascript/Typescript!
 
 ### Prerequisites
 
-- Nvim >= 4.4
+- Nvim >= 0.7.0
 - NodeJS >= 16
 - Ripgrep
-- Python 3 (**OPTIONAL**: for healthproviders)
-- Ruby >= 3.0.0 (**OPTIONAL**: for healthproviders)
-- Solargraph (**OPTIONAL**: to work with coc-solargraph. You should be able to install it with the following command: `gem install solargraph`)
-- Clangd (**OPTIONAL**: to work with coc-clangd. You should be able to install it with the following commands: `sudo apt-get install clangd-9` (ubuntu) or `brew install llvm` (mac). Remember to add clangd to your path)./opt/llvm/bin
+- Python 3 (**OPTIONAL**)
+- Ruby >= 3.0.0 (**OPTIONAL**)
+- Clangd (**OPTIONAL**. You should be able to install it with the following commands: `sudo apt-get install clangd-9` (ubuntu) or `brew install llvm` (mac). Remember to add clangd to your path)./opt/llvm/bin
 
 ### Installation
 
@@ -35,7 +34,7 @@ cd nvim && nvim .
 4. Install Plugins.
 
 ```
-:PlugInstall
+:PackerInstall
 ```
 
 5. Enjoy!
