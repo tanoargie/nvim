@@ -20,8 +20,10 @@ map("n", "<Leader>gp", ":Git push<CR>")
 
 -- TELESCOPE MAPPINGS
 local builtin = require('telescope.builtin')
+local find_files_hidden = function() return builtin.find_files({ hidden = true }) end
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files)
+vim.keymap.set('n', '<leader>fy', find_files_hidden)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 vim.keymap.set('n', '<leader>fb', builtin.buffers)
 vim.keymap.set('n', '<leader>fh', builtin.help_tags)
