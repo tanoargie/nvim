@@ -14,6 +14,10 @@ map("n", "<Leader>p", "\"_dP")
 map("n", "<Leader>ca", ":%bd|e#<cr>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 
+-- VIM-FUGITIVE
+map("n", "<Leader>gs", ":Git<CR>")
+map("n", "<Leader>gp", ":Git push<CR>")
+
 -- TELESCOPE MAPPINGS
 local builtin = require('telescope.builtin')
 
@@ -29,5 +33,4 @@ vim.keymap.set('n', '<space>of', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
-
 
