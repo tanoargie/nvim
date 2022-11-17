@@ -18,6 +18,13 @@ map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<Leader>gs", ":Git<CR>")
 map("n", "<Leader>gp", ":Git push<CR>")
 
+-- VIM-TEST
+map("n", "<Leader>tf", ":TestFile<CR>")
+map("n", "<Leader>tn", ":TestNearest<CR>")
+map("n", "<Leader>ts", ":TestSuite<CR>")
+map("n", "<Leader>tl", ":TestLast<CR>")
+map("n", "<Leader>tv", ":TestVisit<CR>")
+
 -- TELESCOPE MAPPINGS
 local builtin = require('telescope.builtin')
 local find_files_hidden = function() return builtin.find_files({ hidden = true }) end

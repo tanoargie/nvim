@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
     use {
         'numToStr/Comment.nvim',
         config = function()
-            require('Comment').setup()
+           require('Comment').setup()
         end
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -28,4 +28,5 @@ return require('packer').startup(function(use)
       "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
     }
+    use 'vim-test/vim-test'
 end)
