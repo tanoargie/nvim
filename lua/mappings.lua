@@ -29,11 +29,11 @@ map("n", "<Leader>tv", ":TestVisit<CR>")
 local builtin = require('telescope.builtin')
 local find_files_hidden = function() return builtin.find_files({ hidden = true }) end
 
-vim.keymap.set('n', '<leader>ff', builtin.find_files)
-vim.keymap.set('n', '<leader>fy', find_files_hidden)
-vim.keymap.set('n', '<leader>fg', builtin.live_grep)
-vim.keymap.set('n', '<leader>fb', builtin.buffers)
-vim.keymap.set('n', '<leader>fh', builtin.help_tags)
+vim.keymap.set('n', '<leader>p', builtin.find_files)
+vim.keymap.set('n', '<leader>h', find_files_hidden)
+vim.keymap.set('n', '<leader>f', builtin.live_grep)
+vim.keymap.set('n', '<leader>b', builtin.buffers)
+vim.keymap.set('n', '<leader>t', builtin.help_tags)
 
 -- NVIM-LSPCONFIG
 local opts = { noremap=true, silent=true }
@@ -42,4 +42,11 @@ vim.keymap.set('n', '<space>of', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+
+-- Move between panes
+map("n", "<Leader><C-k>", ":wincmd k<CR>")
+map("n", "<Leader><C-j>", ":wincmd j<CR>")
+map("n", "<silent> <C-h>", ":wincmd h<CR>")
+map("n", "<silent> <C-l>", ":wincmd l<CR>")
+
 
