@@ -29,11 +29,11 @@ map("n", "<Leader>tv", ":TestVisit<CR>")
 local builtin = require('telescope.builtin')
 local find_files_hidden = function() return builtin.find_files({ hidden = true }) end
 
-vim.keymap.set('n', '<leader>p', builtin.find_files)
-vim.keymap.set('n', '<leader>h', find_files_hidden)
-vim.keymap.set('n', '<leader>f', builtin.live_grep)
-vim.keymap.set('n', '<leader>b', builtin.buffers)
-vim.keymap.set('n', '<leader>t', builtin.help_tags)
+vim.keymap.set('n', '<Leader>p', builtin.find_files)
+vim.keymap.set('n', '<Leader>h', find_files_hidden)
+vim.keymap.set('n', '<Leader>l', builtin.live_grep)
+vim.keymap.set('n', '<Leader>b', builtin.buffers)
+vim.keymap.set('n', '<Leader>t', builtin.help_tags)
 
 -- NVIM-LSPCONFIG
 local opts = { noremap=true, silent=true }
