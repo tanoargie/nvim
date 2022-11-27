@@ -7,9 +7,16 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.o.termguicolors = true
 
+local nvimTree = require('nvim-tree')
+
 require("nvim-tree").setup({
   filters = { dotfiles = false },
-  view = { 
+  actions = {
+    open_file = {
+      quit_on_open = true
+    }
+  },
+  view = {
     relativenumber = true,
     number = true 
   }
