@@ -1,10 +1,10 @@
 -- Functional wrapper for mapping custom keybindings
 function map(mode, lhs, rhs, opts)
-    local options = { noremap = true }
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+  local options = { noremap = true }
+  if opts then
+    options = vim.tbl_extend("force", options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- UTILS
@@ -13,6 +13,7 @@ map("v", "<Leader>d", "\"_d")
 map("n", "<Leader>p", "\"_dP")
 map("n", "<Leader>ca", ":%bd|e#<CR>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
+map("n", "<Tab>", "gt")
 
 -- VIM-FUGITIVE
 map("n", "<Leader>gs", ":Git<CR>")
@@ -36,7 +37,7 @@ vim.keymap.set('n', '<Leader>b', builtin.buffers)
 vim.keymap.set('n', '<Leader>t', builtin.help_tags)
 
 -- NVIM-LSPCONFIG
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 
 vim.keymap.set('n', '<space>of', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
@@ -48,5 +49,3 @@ map("n", "<Leader><C-k>", ":wincmd k<CR>")
 map("n", "<Leader><C-j>", ":wincmd j<CR>")
 map("n", "<silent> <C-h>", ":wincmd h<CR>")
 map("n", "<silent> <C-l>", ":wincmd l<CR>")
-
-
