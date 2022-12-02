@@ -13,7 +13,6 @@ map("v", "<Leader>d", "\"_d")
 map("n", "<Leader>p", "\"_dP")
 map("n", "<Leader>ca", ":%bd|e#<CR>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
-map("n", "<Tab>", "gt")
 
 -- VIM-FUGITIVE
 map("n", "<Leader>gs", ":Git<CR>")
