@@ -7,8 +7,7 @@ local settings = {
     smartindent = true,
     expandtab = true,
     tabstop = 2,
-    shiftwidth = 2,
-    noswapfile = true
+    shiftwidth = 2
 }
 
 for k, v in pairs(settings) do
