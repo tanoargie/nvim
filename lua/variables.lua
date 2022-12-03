@@ -18,10 +18,12 @@ require("nvim-tree").setup({
   },
   view = {
     relativenumber = true,
-    number = true 
+    number = true
+  },
+  update_focused_file = {
+    enable = true
   }
 })
 
 -- TOKYONIGHT COLORSCHEME
-vim.cmd[[colorscheme tokyonight]]
-
+vim.cmd [[colorscheme tokyonight]]
