@@ -10,8 +10,7 @@ end
 -- UTILS
 map("n", "<Leader>d", "\"_d")
 map("v", "<Leader>d", "\"_d")
-map("v", "<Leader>p", "\"_dP")
-
+map("n", "<Leader>p", "\"_dP")
 map("n", "<Leader>ca", ":%bd|e#<CR>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 
