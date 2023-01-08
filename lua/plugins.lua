@@ -31,4 +31,8 @@ return require('packer').startup(function(use)
   }
   use 'vim-test/vim-test'
   use 'segeljakt/vim-silicon'
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
 end)
