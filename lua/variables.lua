@@ -25,6 +25,14 @@ require("nvim-tree").setup({
   }
 })
 
+-- NVIM-TREESITTER
+
+require('nvim-treesitter.configs').setup({
+  autotag = {
+    enable = true
+  }
+})
+
 -- MARKDOWN-PREVIEW.NVIM
 vim.g.mkdp_auto_start = 0
 
