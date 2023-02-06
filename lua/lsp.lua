@@ -27,15 +27,22 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 
   require('lsp-format').on_attach(client)
+
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'solargraph', 'tsserver', 'pyright', 'rust_analyzer', 'sumneko_lua', 'cmake' }
+local servers = { 'clangd', 'solargraph', 'tsserver', 'pyright', 'rust_analyzer', 'sumneko_lua', 'cmake', 'volar' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
     capabilities = capabilities,
-    on_attach = on_attach
+    on_attach = on_attach,
+    settings = {
+      codeActionOnSave = {
+        enable = true,
+        mode = "all"
+      },
+    }
   }
 end
 
@@ -82,3 +89,28 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+-- null-ls
+local null_ls = require("null-ls")
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+null_ls.setup({
+  sources = {
+    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.diagnostics.eslint,
+    null_ls.builtins.code_actions.eslint,
+    null_ls.builtins.completion.luasnip,
+  },
+  on_attach = function(client, bufnr)
+    if client.supports_method("textDocument/formatting") then
+      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup,
+        buffer = bufnr,
+        callback = function()
+          vim.lsp.buf.format({ bufnr = bufnr })
+        end,
+      })
+    end
+  end,
+})

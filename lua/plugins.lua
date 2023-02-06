@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
   }
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
+  use 'jose-elias-alvarez/null-ls.nvim'
   use 'tpope/vim-fugitive'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
