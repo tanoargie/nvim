@@ -10,7 +10,7 @@ end
 -- UTILS
 map("n", "<Leader>d", "\"_d")
 map("v", "<Leader>d", "\"_d")
-map("n", "<Leader>p", "\"_dP")
+map("v", "<Leader>p", "\"_dP")
 map("n", "<Leader>cab", ":%bd|e#<CR>")
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 
@@ -38,10 +38,10 @@ vim.keymap.set('n', '<Leader>t', builtin.help_tags)
 -- NVIM-LSPCONFIG
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set('n', '<space>of', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '<Leader>of', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+vim.keymap.set('n', '<Leader>q', vim.diagnostic.setloclist, opts)
 
 -- Move between panes
 map("n", "<Leader><C-k>", ":wincmd k<CR>")
