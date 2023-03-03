@@ -10,6 +10,7 @@ vim.o.termguicolors = true
 local nvimTree = require('nvim-tree')
 
 require("nvim-tree").setup({
+  open_on_setup = true,
   filters = { dotfiles = false },
   actions = {
     open_file = {
