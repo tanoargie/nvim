@@ -27,7 +27,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 
   require('lsp-format').on_attach(client)
-
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
@@ -42,6 +41,11 @@ for _, lsp in ipairs(servers) do
         enable = true,
         mode = "all"
       },
+      typescript = {
+        format = {
+          insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false
+        }
+      }
     }
   }
 end
