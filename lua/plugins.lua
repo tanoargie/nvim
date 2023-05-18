@@ -1,4 +1,5 @@
 return require('packer').startup(function(use)
+  use 'wbthomason/packer.nvim'
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -23,8 +24,8 @@ return require('packer').startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'tpope/vim-fugitive'
   use 'hrsh7th/cmp-nvim-lsp'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip'
+  use 'SirVer/ultisnips'
+  use 'quangnguyen30192/cmp-nvim-ultisnips'
   use 'mfussenegger/nvim-dap'
   use 'lukas-reineke/lsp-format.nvim'
   use {
