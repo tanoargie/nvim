@@ -1,5 +1,6 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'kylechui/nvim-surround'
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
