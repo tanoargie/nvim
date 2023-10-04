@@ -29,26 +29,44 @@ local on_attach = function(client, bufnr)
   require('lsp-format').on_attach(client)
 end
 
+local settings = {
+  codeActionOnSave = {
+    enable = true,
+    mode = "all"
+  }
+}
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'solargraph', 'tsserver', 'pyright', 'rust_analyzer', 'lua_ls', 'cmake', 'volar', 'dartls',
-  'gopls', 'bashls' }
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    -- on_attach = my_custom_on_attach,
-    capabilities = capabilities,
-    on_attach = on_attach,
-    settings = {
-      codeActionOnSave = {
-        enable = true,
-        mode = "all"
-      },
-      typescript = {
+local default_config = {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = settings
+}
+
+local servers = {
+  clangd = {},
+  solargraph = {},
+  tsserver = {
+    settings = vim.tbl_deep_extend(
+      'force',
+      settings,
+      {
         format = {
           insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false
         }
       }
-    }
-  }
+    )
+  },
+  pyright = {},
+  rust_analyzer = {},
+  lua_ls = {},
+  cmake = {},
+  volar = {},
+  dartls = {},
+  gopls = {},
+  bashls = {}
+}
+for server, config in pairs(servers) do
+  lspconfig[server].setup(vim.tbl_deep_extend('force', default_config, config))
 end
 
 -- nvim-cmp setup
