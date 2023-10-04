@@ -17,6 +17,7 @@ map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 -- VIM-FUGITIVE
 map("n", "<Leader>gs", ":Git<CR>")
 map("n", "<Leader>gp", ":Git push<CR>")
+map("n", "<Leader>gl", ":Git pull<CR>")
 
 -- VIM-TEST
 map("n", "<Leader>tf", ":TestFile<CR>")
