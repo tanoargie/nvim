@@ -7,6 +7,12 @@ function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- NVIM-DAP
+map("n", "<Leader>dt", ":DapUiToggle<CR>")
+map("n", "<Leader>db", ":DapToggleBreakpoint<CR>")
+map("n", "<Leader>dc", ":DapContinue<CR>")
+map("n", "<Leader>dr", ":lua require('dapui').open({ reset = true })<CR>")
+
 -- UTILS
 map("n", "<Leader>d", "\"_d")
 map("v", "<Leader>d", "\"_d")
