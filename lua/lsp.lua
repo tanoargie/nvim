@@ -58,7 +58,17 @@ local servers = {
   },
   pyright = {},
   rust_analyzer = {},
-  lua_ls = {},
+  lua_ls = {
+    settings = vim.tbl_deep_extend(
+      'force',
+      settings,
+      {
+        Lua = {
+          diagnostics = { globals = { 'vim' } }
+        }
+      }
+    )
+  },
   cmake = {},
   volar = {},
   dartls = {},
