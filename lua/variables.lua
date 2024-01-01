@@ -7,10 +7,10 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.o.termguicolors = true
 
+-- NVIM-DAP
+require("dapui").setup()
+
 -- NVIM-TREE
-
-local nvimTree = require('nvim-tree')
-
 require("nvim-tree").setup({
   filters = { dotfiles = false },
   actions = {
