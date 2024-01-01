@@ -8,7 +8,7 @@ function map(mode, lhs, rhs, opts)
 end
 
 -- NVIM-DAP
-map("n", "<Leader>dt", ":DapUiToggle<CR>")
+map("n", "<Leader>dt", ":lua require('dapui').toggle()<CR>")
 map("n", "<Leader>db", ":DapToggleBreakpoint<CR>")
 map("n", "<Leader>dc", ":DapContinue<CR>")
 map("n", "<Leader>dr", ":lua require('dapui').open({ reset = true })<CR>")
