@@ -1,5 +1,5 @@
 -- Functional wrapper for mapping custom keybindings
-function map(mode, lhs, rhs, opts)
+local map = function(mode, lhs, rhs, opts)
   local options = { noremap = true }
   if opts then
     options = vim.tbl_extend("force", options, opts)
@@ -7,10 +7,19 @@ function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+local dap = require('dap-configs')
+
+local continue = function()
+  if vim.fn.filereadable('.vscode/launch.json') then
+    require('dap.ext.vscode').load_launchjs(nil, { lldb = { 'c', 'cpp' } })
+  end
+  dap.continue()
+end
+
 -- NVIM-DAP
 map("n", "<Leader>dt", ":lua require('dapui').toggle()<CR>")
 map("n", "<Leader>db", ":DapToggleBreakpoint<CR>")
-map("n", "<Leader>dc", ":DapContinue<CR>")
+map("n", "<Leader>dc", ":DapContinue", { callback = continue })
 map("n", "<Leader>dr", ":lua require('dapui').open({ reset = true })<CR>")
 
 -- UTILS

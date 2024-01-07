@@ -14,10 +14,7 @@ dap.configurations.cpp = {
     program = function()
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
-    cwd = '${workspaceFolder}',
-    stopOnEntry = false,
-    args = {},
-    runInTerminal = true,
+    cwd = '${workspaceFolder}'
   },
 }
 
@@ -52,3 +49,5 @@ dap.configurations.dart = {
     cwd = "${workspaceFolder}",
   }
 }
+
+return dap
