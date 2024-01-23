@@ -20,7 +20,8 @@ require("nvim-tree").setup({
   },
   view = {
     relativenumber = true,
-    number = true
+    number = true,
+    adaptive_size = true
   },
   update_focused_file = {
     enable = true
