@@ -22,7 +22,7 @@ mkdir ~/.config && cd ~/.config
 2. Clone this repository
 
 ```
-git clone git@github.com:francoserio/nvim.git
+git clone git@github.com:tanoargie/nvim.git
 ```
 
 3. Enter newly created folder and open it.
