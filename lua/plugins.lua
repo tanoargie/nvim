@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'windwp/nvim-ts-autotag'
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use 'neovim/nvim-lspconfig'
@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
   use 'SirVer/ultisnips'
   use 'quangnguyen30192/cmp-nvim-ultisnips'
   use 'mfussenegger/nvim-dap'
+  use 'suketa/nvim-dap-ruby'
   use { 'rcarriga/nvim-dap-ui', requires = 'mfussenegger/nvim-dap' }
   use { 'theHamsta/nvim-dap-virtual-text', requires = 'mfussenegger/nvim-dap' }
   use 'lukas-reineke/lsp-format.nvim'

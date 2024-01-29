@@ -10,6 +10,9 @@ vim.o.termguicolors = true
 -- NVIM-DAP
 require("dapui").setup()
 
+-- NVIM-DAP-RUBY
+require("dap-ruby").setup()
+
 -- NVIM-TREE
 require("nvim-tree").setup({
   filters = { dotfiles = false },
