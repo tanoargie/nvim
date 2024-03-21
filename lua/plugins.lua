@@ -25,6 +25,8 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'SirVer/ultisnips'
+  use 'mlaursen/vim-react-snippets'
+  use 'nvim-neotest/nvim-nio'
   use 'quangnguyen30192/cmp-nvim-ultisnips'
   use 'mfussenegger/nvim-dap'
   use 'suketa/nvim-dap-ruby'
