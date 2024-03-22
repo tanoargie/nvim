@@ -73,7 +73,8 @@ local servers = {
   volar = {},
   dartls = {},
   gopls = {},
-  bashls = {}
+  bashls = {},
+  tailwindcss = {}
 }
 for server, config in pairs(servers) do
   lspconfig[server].setup(vim.tbl_deep_extend('force', default_config, config))
