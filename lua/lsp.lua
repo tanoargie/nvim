@@ -57,6 +57,21 @@ local servers = {
     )
   },
   pyright = {},
+  cssls = {
+    capabilities = vim.tbl_deep_extend(
+      'force',
+      capabilities,
+      {
+        textDocument = {
+          completion = {
+            completionItem = {
+              snippetSupport = true
+            }
+          }
+        }
+      }
+    )
+  },
   rust_analyzer = {},
   lua_ls = {
     settings = vim.tbl_deep_extend(
