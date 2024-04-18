@@ -1,6 +1,9 @@
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+require("mason").setup()
+require("mason-lspconfig").setup()
+
 local lspconfig = require('lspconfig')
 
 local on_attach = function(client, bufnr)
@@ -54,7 +57,7 @@ local servers = {
           insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false
         }
       }
-    )
+    ),
   },
   pyright = {},
   cssls = {
@@ -85,7 +88,14 @@ local servers = {
     )
   },
   cmake = {},
-  volar = {},
+  volar = {
+    filetypes = { 'vue' },
+    init_options = {
+      vue = {
+        hybridMode = false,
+      },
+    },
+  },
   dartls = {},
   gopls = {},
   bashls = {},

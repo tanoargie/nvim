@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
     },
   }
   use 'folke/tokyonight.nvim'
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -39,8 +41,8 @@ return require('packer').startup(function(use)
   }
   use 'vim-test/vim-test'
   use 'segeljakt/vim-silicon'
-  use({
+  use {
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
-  })
+  }
 end)
