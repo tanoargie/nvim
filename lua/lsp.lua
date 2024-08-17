@@ -47,7 +47,11 @@ local default_config = {
 
 local servers = {
   clangd = {},
-  solargraph = {},
+  solargraph = {
+    init_options = {
+      formatting = true
+    }
+  },
   tsserver = {
     settings = vim.tbl_deep_extend(
       'force',
