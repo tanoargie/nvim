@@ -16,9 +16,6 @@ local continue = function()
   dap.continue()
 end
 
--- CODEIUM
-map("i", "<Right>", "codeium#Accept()", { silent = true, expr = true, nowait = true })
-
 -- NVIM-DAP
 map("n", "<Leader>dt", ":lua require('dapui').toggle()<CR>")
 map("n", "<Leader>db", ":DapToggleBreakpoint<CR>")

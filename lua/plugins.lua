@@ -9,7 +9,6 @@ return require('packer').startup(function(use)
   }
   use 'folke/tokyonight.nvim'
   use "williamboman/mason.nvim"
-  use "Exafunction/codeium.vim"
   use "williamboman/mason-lspconfig.nvim"
   use {
     'numToStr/Comment.nvim',
