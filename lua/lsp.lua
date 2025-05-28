@@ -52,7 +52,7 @@ local servers = {
       formatting = true
     }
   },
-  tsserver = {
+  ts_ls = {
     settings = vim.tbl_deep_extend(
       'force',
       settings,
