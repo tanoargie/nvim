@@ -2,7 +2,9 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("mason").setup()
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup({
+  automatic_enable = false, -- Enable after Neovim is updated to 0.11.
+})
 
 local lspconfig = require('lspconfig')
 

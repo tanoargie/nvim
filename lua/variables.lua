@@ -5,8 +5,6 @@ vim.g.mapleader = " "
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.o.termguicolors = true
-
 -- NVIM-DAP
 require("dapui").setup()
 
@@ -94,4 +92,4 @@ vim.g.mkdp_filetypes = { 'markdown' }
 vim.g.mkdp_theme = 'dark'
 
 -- TOKYONIGHT COLORSCHEME
-vim.cmd [[colorscheme tokyonight]]
+vim.cmd [[colorscheme gruvbox]]

@@ -7,9 +7,9 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
-  use 'folke/tokyonight.nvim'
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
+  use 'morhetz/gruvbox'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
   use {
     'numToStr/Comment.nvim',
     config = function()
