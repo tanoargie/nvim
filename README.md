@@ -7,7 +7,7 @@ This is my neovim configuration file in Lua. It has code completion and has plug
 - Nvim >= 0.7.0
 - NodeJS >= 16
 - Ripgrep
-- Python 3 (**OPTIONAL**)
+- Python 3
 - Ruby >= 3.0.0 (**OPTIONAL**)
 - Clangd (**OPTIONAL**. You should be able to install it with the following commands: `sudo apt-get install clangd-9` (ubuntu) or `brew install llvm` (mac). Remember to add clangd to your path)./opt/llvm/bin
 
