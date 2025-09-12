@@ -7,6 +7,20 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
+  use {
+    "olimorris/codecompanion.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("codecompanion").setup {
+        opts = {
+          log_level = "DEBUG",
+        },
+      }
+    end,
+  }
   use 'morhetz/gruvbox'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
