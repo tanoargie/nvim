@@ -4,7 +4,7 @@ This is my neovim configuration file in Lua. It has code completion and has plug
 
 ### Prerequisites
 
-- Nvim >= 0.7.0
+- Nvim >= 0.11.0
 - NodeJS >= 16
 - Ripgrep
 - Python 3
