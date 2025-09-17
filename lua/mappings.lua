@@ -22,6 +22,9 @@ map("n", "<Leader>db", ":DapToggleBreakpoint<CR>")
 map("n", "<Leader>dc", ":DapContinue", { callback = continue })
 map("n", "<Leader>dr", ":lua require('dapui').open({ reset = true })<CR>")
 
+-- NVIM-CODECOMPANION
+map("n", "<Leader>ac", ":CodeCompanionChat<CR>")
+
 -- UTILS
 map("n", "<Leader>d", "\"_d")
 map("v", "<Leader>d", "\"_d")
@@ -33,6 +36,8 @@ map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<Leader>gs", ":Git<CR>")
 map("n", "<Leader>gp", ":Git push<CR>")
 map("n", "<Leader>gl", ":Git pull<CR>")
+map("n", "<Leader>gu", ":Git push -u origin HEAD<CR>")
+map("n", "<Leader>gF", ":Git push -f origin HEAD<CR>")
 
 -- VIM-TEST
 map("n", "<Leader>tf", ":TestFile<CR>")
