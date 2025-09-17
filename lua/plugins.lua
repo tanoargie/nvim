@@ -55,7 +55,6 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
   use 'vim-test/vim-test'
-  use 'segeljakt/vim-silicon'
   use {
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
