@@ -48,11 +48,13 @@ map("n", "<Leader>tv", ":TestVisit<CR>")
 
 -- TELESCOPE MAPPINGS
 local builtin = require('telescope.builtin')
+local lga = require('telescope').extensions.live_grep_args
 local find_files_hidden = function() return builtin.find_files({ hidden = true }) end
 
 vim.keymap.set('n', '<Leader>p', builtin.find_files)
 vim.keymap.set('n', '<Leader>h', find_files_hidden)
 vim.keymap.set('n', '<Leader>l', builtin.live_grep)
+vim.keymap.set('n', '<Leader>L', lga.live_grep_args)
 vim.keymap.set('n', '<Leader>b', builtin.buffers)
 vim.keymap.set('n', '<Leader>t', builtin.help_tags)
 
