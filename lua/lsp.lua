@@ -6,8 +6,6 @@ require("mason-lspconfig").setup({
   automatic_enable = true, -- Enable after Neovim is updated to 0.11.
 })
 
-local lspconfig = require('lspconfig')
-
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -108,7 +106,7 @@ local servers = {
   tailwindcss = {}
 }
 for server, config in pairs(servers) do
-  lspconfig[server].setup(vim.tbl_deep_extend('force', default_config, config))
+  vim.lsp.config(server, vim.tbl_deep_extend('force', default_config, config))
 end
 
 -- nvim-cmp setup
