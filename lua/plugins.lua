@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
+    tag = "v17.33.0",
     config = function()
       require("codecompanion").setup {
         opts = {
