@@ -14,13 +14,11 @@ return require('packer').startup(function(use)
       "nvim-treesitter/nvim-treesitter",
     },
     tag = "v17.33.0",
-    config = function()
-      require("codecompanion").setup {
-        opts = {
-          log_level = "DEBUG",
-        },
+    opts = {
+      opts = {
+        log_level = "DEBUG",
       }
-    end,
+    }
   }
   use 'morhetz/gruvbox'
   use 'williamboman/mason.nvim'
