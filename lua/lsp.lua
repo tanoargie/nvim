@@ -103,7 +103,8 @@ local servers = {
   dartls = {},
   gopls = {},
   bashls = {},
-  tailwindcss = {}
+  tailwindcss = {},
+  yamlls = {},
 }
 for server, config in pairs(servers) do
   vim.lsp.config(server, vim.tbl_deep_extend('force', default_config, config))
