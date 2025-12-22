@@ -9,15 +9,17 @@ return require('packer').startup(function(use)
   }
   use {
     "olimorris/codecompanion.nvim",
+    config = function()
+      require("codecompanion").setup({
+        opts = {
+          log_level = "DEBUG",
+        }
+      })
+    end,
     requires = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
-    },
-    tag = "v17.33.0",
-    opts = {
-      opts = {
-        log_level = "DEBUG",
-      }
+      "ravitemer/mcphub.nvim"
     }
   }
   use 'morhetz/gruvbox'
