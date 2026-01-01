@@ -36,6 +36,7 @@ map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 map("n", "<Leader>gs", ":Git<CR>")
 map("n", "<Leader>gp", ":Git push<CR>")
 map("n", "<Leader>gl", ":Git pull<CR>")
+map("n", "<Leader>gc", ":Gclog<CR>")
 map("n", "<Leader>gu", ":Git push -u origin HEAD<CR>")
 map("n", "<Leader>gF", ":Git push -f origin HEAD<CR>")
 
