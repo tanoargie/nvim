@@ -2,9 +2,6 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("mason").setup()
-require("mason-lspconfig").setup({
-  automatic_enable = true, -- Enable after Neovim is updated to 0.11.
-})
 
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
@@ -106,9 +103,14 @@ local servers = {
   tailwindcss = {},
   yamlls = {},
 }
+
 for server, config in pairs(servers) do
   vim.lsp.config(server, vim.tbl_deep_extend('force', default_config, config))
 end
+
+require("mason-lspconfig").setup({
+  ensure_installed = vim.tbl_keys(servers)
+})
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
