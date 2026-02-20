@@ -22,9 +22,6 @@ map("n", "<Leader>db", ":DapToggleBreakpoint<CR>")
 map("n", "<Leader>dc", ":DapContinue", { callback = continue })
 map("n", "<Leader>dr", ":lua require('dapui').open({ reset = true })<CR>")
 
--- NVIM-CODECOMPANION
-map("n", "<Leader>ac", ":CodeCompanionChat<CR>")
-
 -- UTILS
 map("n", "<Leader>d", "\"_d")
 map("v", "<Leader>d", "\"_d")
