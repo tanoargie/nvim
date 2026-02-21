@@ -8,8 +8,8 @@ return require('packer').startup(function(use)
     },
   }
   use 'morhetz/gruvbox'
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
+  use 'mason-org/mason.nvim'
+  use 'mason-org/mason-lspconfig.nvim'
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
     requires = {
       { 'nvim-lua/plenary.nvim' },
-      { "nvim-telescope/telescope-live-grep-args.nvim" },
+      { 'nvim-telescope/telescope-live-grep-args.nvim' },
     },
     config = function()
       require('telescope').setup({})
@@ -44,12 +44,12 @@ return require('packer').startup(function(use)
   use { 'theHamsta/nvim-dap-virtual-text', requires = 'mfussenegger/nvim-dap' }
   use 'lukas-reineke/lsp-format.nvim'
   use {
-    "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+    'windwp/nvim-autopairs',
+    config = function() require('nvim-autopairs').setup {} end
   }
   use 'vim-test/vim-test'
   use {
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
+    'iamcco/markdown-preview.nvim',
+    run = function() vim.fn['mkdp#util#install']() end,
   }
 end)
