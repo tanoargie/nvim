@@ -89,15 +89,12 @@ local servers = {
     )
   },
   cmake = {},
-  volar = {
+  vue_ls = {
     filetypes = { 'vue' },
-    init_options = {
-      vue = {
-        hybridMode = false,
-      },
-    },
   },
-  dartls = {},
+  dartls = {
+    cmd = { "dart", "language-server", "--protocol=lsp" },
+  },
   gopls = {},
   bashls = {},
   tailwindcss = {},
@@ -108,8 +105,10 @@ for server, config in pairs(servers) do
   vim.lsp.config(server, vim.tbl_deep_extend('force', default_config, config))
 end
 
+-- Ensure the servers above are installed except dartls, which is not available in mason and already comes in dart
+servers['dartls'] = nil
 require("mason-lspconfig").setup({
-  ensure_installed = vim.tbl_keys(servers)
+  ensure_installed = vim.tbl_keys(servers),
 })
 
 -- nvim-cmp setup
