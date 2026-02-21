@@ -49,17 +49,6 @@ local servers = {
       formatting = true
     }
   },
-  ts_ls = {
-    settings = vim.tbl_deep_extend(
-      'force',
-      settings,
-      {
-        format = {
-          insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false
-        }
-      }
-    ),
-  },
   pyright = {},
   cssls = {
     capabilities = vim.tbl_deep_extend(
@@ -89,9 +78,6 @@ local servers = {
     )
   },
   cmake = {},
-  vue_ls = {
-    filetypes = { 'vue' },
-  },
   dartls = {
     cmd = { "dart", "language-server", "--protocol=lsp" },
   },
@@ -110,6 +96,35 @@ servers['dartls'] = nil
 require("mason-lspconfig").setup({
   ensure_installed = vim.tbl_keys(servers),
 })
+
+-- Fix vue-language-server to work with tsserver
+local vue_language_server_path = vim.fn.stdpath('data') ..
+    "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
+local vue_plugin = {
+  name = '@vue/typescript-plugin',
+  location = vue_language_server_path,
+  languages = { 'vue' },
+  configNamespace = 'typescript',
+}
+
+local ts_ls_config = {
+  init_options = {
+    plugins = {
+      vue_plugin,
+    },
+  },
+  filetypes = tsserver_filetypes,
+  format = {
+    insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false
+  }
+}
+
+local vue_ls_config = {}
+
+vim.lsp.config('vue_ls', vue_ls_config)
+vim.lsp.config('ts_ls', ts_ls_config)
+vim.lsp.enable({ 'ts_ls', 'vue_ls' })
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
