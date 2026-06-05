@@ -32,10 +32,21 @@ map("n", "<Leader>e", ":NvimTreeToggle<CR>")
 -- VIM-FUGITIVE
 map("n", "<Leader>gs", ":Git<CR>")
 map("n", "<Leader>gp", ":Git push<CR>")
+map("n", "<Leader>gP", ":Git push --follow-tags<CR>")
 map("n", "<Leader>gl", ":Git pull<CR>")
 map("n", "<Leader>gc", ":Gclog<CR>")
 map("n", "<Leader>gu", ":Git push -u origin HEAD<CR>")
 map("n", "<Leader>gF", ":Git push -f origin HEAD<CR>")
+map("n", "<Leader>gb", ":Git blame<CR>")
+map("n", "<Leader>gt", ":Git tag<CR>")
+local annotated_tag = function()
+  local version = vim.fn.input('Tag version: ')
+  if version == '' then return end
+  local message = vim.fn.input('Tag message: ')
+  if message == '' then return end
+  vim.cmd(string.format('Git tag -a %s -m "%s"<CR>', version, message))
+end
+vim.keymap.set('n', '<Leader>gT', annotated_tag)
 
 -- VIM-TEST
 map("n", "<Leader>tf", ":TestFile<CR>")
