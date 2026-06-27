@@ -34,11 +34,25 @@ map("n", "<Leader>gs", ":Git<CR>")
 map("n", "<Leader>gp", ":Git push<CR>")
 map("n", "<Leader>gP", ":Git push --follow-tags<CR>")
 map("n", "<Leader>gl", ":Git pull<CR>")
-map("n", "<Leader>gc", ":Gclog<CR>")
-map("n", "<Leader>gL", ":Git log<CR>")
+local toggle_log = function()
+  if vim.bo.filetype == "git" and vim.bo.buftype ~= "" then
+    vim.cmd("close")
+  else
+    vim.cmd("Git log")
+  end
+end
+vim.keymap.set("n", "<Leader>gL", toggle_log, { silent = true })
 map("n", "<Leader>gu", ":Git push -u origin HEAD<CR>")
 map("n", "<Leader>gF", ":Git push -f origin HEAD<CR>")
-map("n", "<Leader>gb", ":Git blame<CR>")
+local toggle_blame = function()
+  local buf_name = vim.api.nvim_buf_get_name(0)
+  if string.find(buf_name, "fugitiveblame") then
+    vim.cmd("close")
+  else
+    vim.cmd("Git blame")
+  end
+end
+vim.keymap.set("n", "<Leader>gb", toggle_blame, { silent = true })
 map("n", "<Leader>gt", ":Git tag<CR>")
 local annotated_tag = function()
   local version = vim.fn.input('Tag version: ')
