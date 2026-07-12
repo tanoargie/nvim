@@ -44,11 +44,6 @@ local default_config = {
 
 local servers = {
   clangd = {},
-  solargraph = {
-    init_options = {
-      formatting = true
-    }
-  },
   pyright = {},
   cssls = {
     capabilities = vim.tbl_deep_extend(
@@ -85,6 +80,7 @@ local servers = {
   bashls = {},
   tailwindcss = {},
   yamlls = {},
+  ruby_lsp = {}
 }
 
 for server, config in pairs(servers) do
