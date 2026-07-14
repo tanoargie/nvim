@@ -16,6 +16,8 @@ local continue = function()
   dap.continue()
 end
 
+map("n", "<Leader>cf", ":let @+ = expand('%')<CR>")
+
 -- NVIM-DAP
 map("n", "<Leader>dt", ":lua require('dapui').toggle()<CR>")
 map("n", "<Leader>db", ":DapToggleBreakpoint<CR>")
